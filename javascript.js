@@ -10,5 +10,8 @@ function getComputerChoice () {
     }
 }
 
+let box = prompt ("Make your choice. Rock,Paper, or Scissors");
+
+
 
 console.log(getComputerChoice());
