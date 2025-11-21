@@ -13,11 +13,11 @@ function getComputerChoice () {
 let box = prompt ("Make your choice. Rock,Paper, or Scissors");
 
 function getHumanChoice () {
-    if (box == "rock") {
+    if (box.toLowerCase() == "rock") {
         return "you picked rock";
-    } else if (box == "paper") {
+    } else if (box.toLowerCase() == "paper") {
         return "you picked paper";
-    } else if (box == "scissors") {
+    } else if (box.toLowerCase () == "scissors") {
         return "you picked scissors";
     }
 }
