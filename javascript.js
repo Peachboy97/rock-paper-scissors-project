@@ -37,6 +37,6 @@ function playRound (humanChoice, computerChoice) {
 const humanChoice = getHumanChoice ();
 const computerChoice = getComputerChoice ();
 
-// console.log(computerChoice);
-// console.log(humanChoice);
-// console.log(playRound(humanChoice,computerChoice));
+console.log(computerChoice);
+console.log(humanChoice);
+console.log(playRound(humanChoice,computerChoice));
