@@ -2,27 +2,43 @@
 
 function getComputerChoice () {
     if (Math.floor(Math.random()*3) == 0) {
-        return "Rock!";
+        return "rock";
     } else if (Math.floor(Math.random()*3) == 1) {
-        return "Paper!";
+        return "paper";
     } else {
-        return "Scissors!";
-    }
-}
-
-let box = prompt ("Make your choice. Rock,Paper, or Scissors");
-let humanScore = 0;
-let computerScore = 0; 
-
-function getHumanChoice () {
-    if (box.toLowerCase() == "rock") {
-        return "you picked rock";
-    } else if (box.toLowerCase() == "paper") {
-        return "you picked paper";
-    } else if (box.toLowerCase () == "scissors") {
-        return "you picked scissors";
+        return "scissors";
     }
 }
 
 
-console.log(getHumanChoice());
+function getHumanChoice (){
+    let input = prompt ("Make your choice. Rock, Paper, or Scissors");
+    return input.toLocaleLowerCase();
+}
+
+// let humanScore = 0;
+// let computerScore = 0;
+
+
+// function playRound (humanChoice, computerChoice) {
+   
+//    if (humanChoice == computerChoice) {
+//     return "It's a draw";
+//    } else if (humanChoice == "rock" && computerChoice == "scissors"
+//     || humanChoice == "paper" && computerChoice == "rock" 
+//     || humanChoice == "scissors" && computerChoice == "paper"
+//    ) {
+//     return "You win";
+//    } else if (humanChoice == "rock" && computerChoice == "paper"
+//     || humanChoice == "paper" && computerChoice == "scissors" 
+//     || humanChoice == "scissors" && computerChoice == "rock") {
+//     return "You lose";
+//    }
+// } 
+
+// const humanChoice = getHumanChoice ();
+// const computerChoice = getComputerChoice ();
+
+// console.log(computerChoice);
+// console.log(humanChoice);
+// console.log(playRound(humanChoice,computerChoice));
