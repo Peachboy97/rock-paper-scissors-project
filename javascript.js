@@ -20,21 +20,19 @@ let humanScore = 0;
 let computerScore = 0;
 
 
-// function playRound (humanChoice, computerChoice) {
+function playRound (humanChoice, computerChoice) {
    
-//    if (humanChoice == computerChoice) {
-//     return "It's a draw";
-//    } else if (humanChoice == "rock" && computerChoice == "scissors"
-//     || humanChoice == "paper" && computerChoice == "rock" 
-//     || humanChoice == "scissors" && computerChoice == "paper"
-//    ) {
-//     return "You win";
-//    } else if (humanChoice == "rock" && computerChoice == "paper"
-//     || humanChoice == "paper" && computerChoice == "scissors" 
-//     || humanChoice == "scissors" && computerChoice == "rock") {
-//     return "You lose";
-//    }
-// } 
+   if (humanChoice == computerChoice) {
+    return "It's a draw";
+   } else if (humanChoice == "rock" && computerChoice == "scissors"
+    || humanChoice == "paper" && computerChoice == "rock" 
+    || humanChoice == "scissors" && computerChoice == "paper"
+   ) {
+    return "You win";
+   } else  {
+    return "You lose";
+   }
+} 
 
 // const humanChoice = getHumanChoice ();
 // const computerChoice = getComputerChoice ();
