@@ -28,13 +28,17 @@ function playRound (humanChoice, computerChoice) {
     || humanChoice == "paper" && computerChoice == "rock" 
     || humanChoice == "scissors" && computerChoice == "paper"
    ) { 
-     ++humanScore;
+      ++humanScore;
     return "You win";
    } else  {
     ++computerScore;
     return "You lose";
    }
 } 
+
+function playGame () {
+    
+}
 
 const humanChoice = getHumanChoice ();
 const computerChoice = getComputerChoice ();
