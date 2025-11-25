@@ -22,6 +22,7 @@ const computerChoice = getComputerChoice ();
 function playGame () {
     let humanScore = 0;
     let computerScore = 0;
+    
 
     function playRound (humanChoice, computerChoice) {
         if (humanChoice == computerChoice) {
@@ -38,13 +39,16 @@ function playGame () {
     } 
             
   
- return playRound (humanChoice, computerChoice);
+  
+
+  console.log(playRound (humanChoice, computerChoice));
+  return "Finish"
 }
 
 
 
-// console.log(computerChoice);
-// console.log(humanChoice);
-console.log(playGame())
+console.log(computerChoice);
+console.log(humanChoice);
+console.log(playGame());
 // console.log(humanScore);
 // console.log(computerScore);
