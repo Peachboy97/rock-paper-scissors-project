@@ -16,6 +16,8 @@ function getHumanChoice (){
     return input.toLocaleLowerCase();
 }
 
+const humanChoice = getHumanChoice ();
+const computerChoice = getComputerChoice ();
 
 function playGame () {
     let humanScore = 0;
@@ -23,8 +25,8 @@ function playGame () {
 
     function playRound (humanChoice, computerChoice) {
         if (humanChoice == computerChoice) {
-             return "It's a draw";
-            } else if (humanChoice == "rock" && computerChoice == "scissors"
+         return "It's a draw";
+        } else if (humanChoice == "rock" && computerChoice == "scissors"
                 || humanChoice == "paper" && computerChoice == "rock" 
                 || humanChoice == "scissors" && computerChoice == "paper") { 
                     ++humanScore;
@@ -33,17 +35,16 @@ function playGame () {
                     ++computerScore;
                     return "You lose";
                 }
-            } 
+    } 
             
-  playRound ();
-    
+  
+ return playRound (humanChoice, computerChoice);
 }
 
-const humanChoice = getHumanChoice ();
-const computerChoice = getComputerChoice ();
 
-console.log(computerChoice);
-console.log(humanChoice);
-// console.log(playRound(humanChoice,computerChoice));
-console.log(humanScore);
-console.log(computerScore);
+
+// console.log(computerChoice);
+// console.log(humanChoice);
+console.log(playGame())
+// console.log(humanScore);
+// console.log(computerScore);
