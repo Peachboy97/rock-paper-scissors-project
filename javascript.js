@@ -22,27 +22,28 @@ const computerChoice = getComputerChoice ();
 function playGame () {
     let humanScore = 0;
     let computerScore = 0;
-    
 
     function playRound (humanChoice, computerChoice) {
+        
         if (humanChoice == computerChoice) {
-         return "It's a draw";
+         console.log("It's a draw");
+         return (getHumanChoice (), getComputerChoice ());
         } else if (humanChoice == "rock" && computerChoice == "scissors"
                 || humanChoice == "paper" && computerChoice == "rock" 
                 || humanChoice == "scissors" && computerChoice == "paper") { 
                     ++humanScore;
-                    return "You win";
+                    console.log("You win");
+                    return (getHumanChoice (), getComputerChoice ());
                 } else {
                     ++computerScore;
-                    return "You lose";
+                    console.log("You lose");
+                    return (getHumanChoice (), getComputerChoice ());
                 }
     } 
-            
-  
-  
+    
+   playRound (humanChoice, computerChoice);
 
-  console.log(playRound (humanChoice, computerChoice));
-  return "Finish"
+  return "game over"
 }
 
 
