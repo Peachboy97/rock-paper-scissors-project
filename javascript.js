@@ -19,7 +19,7 @@ function getHumanChoice (){
 const humanChoice = getHumanChoice ();
 const computerChoice = getComputerChoice ();
 
-function playGame (humanChoice,computerChoice) {
+function playGame () {
     let humanScore = 0;
     let computerScore = 0;
     
@@ -31,7 +31,9 @@ function playGame (humanChoice,computerChoice) {
          console.log (computerChoice);
          console.log (humanScore);
          console.log (computerScore); 
-         return console.log("It's a draw");
+         console.log ("It's a draw");
+         return playGame ();
+
         } else if (humanChoice === "rock" && computerChoice === "scissors"
                 || humanChoice === "paper" && computerChoice === "rock" 
                 || humanChoice === "scissors" && computerChoice === "paper") { 
@@ -41,7 +43,8 @@ function playGame (humanChoice,computerChoice) {
                     console.log (computerChoice);
                     console.log (humanScore);
                     console.log (computerScore);
-                    return console.log("You win");
+                    console.log ("You win");
+                    return playGame ();
 
                 } else if (humanChoice === "paper" && computerChoice === "scissors"
                     || humanChoice === "scissors" && computerChoice === "rock"
@@ -52,15 +55,16 @@ function playGame (humanChoice,computerChoice) {
                     console.log (computerChoice);
                     console.log (humanScore);
                     console.log (computerScore);
+                    console.log ("You lose");
                    
-                    return console.log("You lose");
+                    return playGame ();
                 }
     } 
 
  
  
- //   playRound (humanChoice, computerChoice);
-  console.log (playRound(humanChoice, computerChoice));
+   playRound (humanChoice, computerChoice);
+ //   console.log (playRound(humanChoice, computerChoice));
   return "game over";
 }
 
@@ -68,6 +72,6 @@ function playGame (humanChoice,computerChoice) {
 
 // console.log(computerChoice);
 // console.log(humanChoice);
-console.log(playGame(humanChoice,computerChoice));
+console.log (playGame());
 // console.log(humanScore);
 // console.log(computerScore);
