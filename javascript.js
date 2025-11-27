@@ -19,37 +19,55 @@ function getHumanChoice (){
 const humanChoice = getHumanChoice ();
 const computerChoice = getComputerChoice ();
 
-function playGame () {
+function playGame (humanChoice,computerChoice) {
     let humanScore = 0;
     let computerScore = 0;
+    
 
     function playRound (humanChoice, computerChoice) {
-        
-        if (humanChoice == computerChoice) {
-         console.log("It's a draw");
-         return (getHumanChoice (), getComputerChoice ());
-        } else if (humanChoice == "rock" && computerChoice == "scissors"
-                || humanChoice == "paper" && computerChoice == "rock" 
-                || humanChoice == "scissors" && computerChoice == "paper") { 
+        if (humanChoice === computerChoice) {
+         
+         console.log (humanChoice);
+         console.log (computerChoice);
+         console.log (humanScore);
+         console.log (computerScore); 
+         return console.log("It's a draw");
+        } else if (humanChoice === "rock" && computerChoice === "scissors"
+                || humanChoice === "paper" && computerChoice === "rock" 
+                || humanChoice === "scissors" && computerChoice === "paper") { 
+                   
                     ++humanScore;
-                    console.log("You win");
-                    return (getHumanChoice (), getComputerChoice ());
-                } else {
+                    console.log (humanChoice);
+                    console.log (computerChoice);
+                    console.log (humanScore);
+                    console.log (computerScore);
+                    return console.log("You win");
+
+                } else if (humanChoice === "paper" && computerChoice === "scissors"
+                    || humanChoice === "scissors" && computerChoice === "rock"
+                    || humanChoice === "rock" && computerChoice === "paper")
+                    {
                     ++computerScore;
-                    console.log("You lose");
-                    return (getHumanChoice (), getComputerChoice ());
+                    console.log (humanChoice);
+                    console.log (computerChoice);
+                    console.log (humanScore);
+                    console.log (computerScore);
+                   
+                    return console.log("You lose");
                 }
     } 
-    
-   playRound (humanChoice, computerChoice);
 
-  return "game over"
+ 
+ 
+ //   playRound (humanChoice, computerChoice);
+  console.log (playRound(humanChoice, computerChoice));
+  return "game over";
 }
 
 
 
-console.log(computerChoice);
-console.log(humanChoice);
-console.log(playGame());
+// console.log(computerChoice);
+// console.log(humanChoice);
+console.log(playGame(humanChoice,computerChoice));
 // console.log(humanScore);
 // console.log(computerScore);
