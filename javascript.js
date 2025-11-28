@@ -26,7 +26,11 @@ function playGame () {
     const computerChoice = getComputerChoice ();
 
     function gameOverConditions (humanScore,computerScore) {
-        if (humanScore === 4 && computerScore === 1) {
+        if (humanScore === 5 && computerScore === 0) {
+            console.log ("You've won the game");
+        } else if (humanScore === 0 && computerScore === 5){
+            console.log ("You've lost the game. The computer won");
+        } else if (humanScore === 4 && computerScore === 1) {
             console.log("You've won the game");
         } else if (computerScore === 4 && humanScore === 1) {
             console.log("You've lost the game. The computer won");
@@ -86,7 +90,7 @@ function playGame () {
     } 
 
  
-  return "say what";
+  return "Game Over :D";
 }
 
 
