@@ -16,8 +16,7 @@ function getHumanChoice (){
     return input.toLocaleLowerCase();
 }
 
-// const humanChoice = getHumanChoice ();
-// const computerChoice = getComputerChoice ();
+
 
 function playGame () {
     let humanScore = 0;
@@ -25,8 +24,25 @@ function playGame () {
 
     const humanChoice = getHumanChoice ();
     const computerChoice = getComputerChoice ();
+
+    function gameOverConditions (humanScore,computerScore) {
+        if (humanScore === 4 && computerScore === 1) {
+            console.log("You've won the game");
+        } else if (computerScore === 4 && humanScore === 1) {
+            console.log("You've lost the game. The computer won");
+        } else if (humanScore === 3 && computerScore === 2) {
+            console.log ("You've won the game");
+        } else if (humanScore === 2 && computerScore === 3) {
+            console.log("You've lose the game. The computer won");
+        } else if (humanScore < 5 && computerScore < 5) {
+            playRound (getHumanChoice (), getComputerChoice ());
+
+        }
+    }
+
     playRound (humanChoice, computerChoice);
-    playAgain ();
+    
+    
 
 
     function playRound (humanChoice, computerChoice) {
@@ -39,7 +55,7 @@ function playGame () {
          console.log (computerScore); 
          console.log ("It's a draw");
     
-         return "It's a draw";
+         return gameOverConditions (humanScore,computerScore);
 
         } else if (humanChoice === "rock" && computerChoice === "scissors"
                 || humanChoice === "paper" && computerChoice === "rock" 
@@ -52,7 +68,7 @@ function playGame () {
                     console.log (computerScore);
                     console.log ("You win");
                     
-                    return "You win";
+                    return gameOverConditions (humanScore,computerScore);
 
                 } else if (humanChoice === "paper" && computerChoice === "scissors"
                     || humanChoice === "scissors" && computerChoice === "rock"
@@ -65,20 +81,12 @@ function playGame () {
                     console.log (computerScore);
                     console.log ("You lose");
                 
-                    return "You lose";
+                    return gameOverConditions (humanScore, computerScore);
                 }
     } 
 
  
- function playAgain () {
-   playGame ();
- }
-  
-
-  
-
- 
-  return "game over";
+  return "say what";
 }
 
 
