@@ -57,9 +57,10 @@ function playGame () {
          console.log (computerChoice);
          console.log (humanScore);
          console.log (computerScore); 
-         console.log ("It's a draw");
+         
+        //  add the gameover condition into return to play 5 rounds 
     
-         return gameOverConditions (humanScore,computerScore);
+         return console.log ("It's a draw");
 
         } else if (humanChoice === "rock" && computerChoice === "scissors"
                 || humanChoice === "paper" && computerChoice === "rock" 
@@ -70,9 +71,9 @@ function playGame () {
                     console.log (computerChoice);
                     console.log (humanScore);
                     console.log (computerScore);
-                    console.log ("You win");
                     
-                    return gameOverConditions (humanScore,computerScore);
+                    
+                    return console.log ("You win");
 
                 } else if (humanChoice === "paper" && computerChoice === "scissors"
                     || humanChoice === "scissors" && computerChoice === "rock"
@@ -83,9 +84,9 @@ function playGame () {
                     console.log (computerChoice);
                     console.log (humanScore);
                     console.log (computerScore);
-                    console.log ("You lose");
+                    
                 
-                    return gameOverConditions (humanScore, computerScore);
+                    return console.log ("You lose");
                 }
     } 
 
