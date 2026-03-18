@@ -64,6 +64,11 @@ function playRound (humanChoice, computerChoice) {
          hScore.textContent = `Your score is ${humanScore}`;
          outcomeDisplay.appendChild(hScore);
 
+
+         const cScore = document.createElement("p");
+         cScore.textContent = `Computer score is ${computerScore}`;
+         outcomeDisplay.appendChild(cScore);
+
         
 
 
@@ -96,7 +101,11 @@ function playRound (humanChoice, computerChoice) {
 
                    const hScore = document.createElement("p");
                    hScore.textContent = `Your score is ${humanScore}`;
-                   outcomeDisplay.appendChild(hScore);                    
+                   outcomeDisplay.appendChild(hScore);       
+                   
+                   const cScore = document.createElement("p");
+                   cScore.textContent = `Computer score is ${computerScore}`;
+                   outcomeDisplay.appendChild(cScore);
 
 
                     
@@ -124,11 +133,13 @@ function playRound (humanChoice, computerChoice) {
                     human.textContent = `You picked: ${humanChoice}`;
                     outcomeDisplay.appendChild(human);
 
-
-
                   const hScore = document.createElement("p");
                   hScore.textContent = `Your score is ${humanScore}`;
                   outcomeDisplay.appendChild(hScore);
+
+                  const cScore = document.createElement("p");
+                  cScore.textContent = `Computer score is ${computerScore}`;
+                  outcomeDisplay.appendChild(cScore);
                     
                 
                     return lose;
