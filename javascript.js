@@ -43,8 +43,6 @@ function playRound (humanChoice, computerChoice) {
     let computerScore = 0;
         
         if (humanChoice === computerChoice) {
-         
-         console.log (humanChoice);
          console.log (computerChoice);
          console.log (humanScore);
          console.log (computerScore);   
@@ -54,8 +52,10 @@ function playRound (humanChoice, computerChoice) {
          outcomeDisplay.appendChild(draw);
 
          const human = document.createElement("p");
-         human.textContent = humanChoice;
+         human.textContent = `You picked: ${humanChoice}`;
          outcomeDisplay.appendChild(human);
+
+        
 
 
          
@@ -68,7 +68,7 @@ function playRound (humanChoice, computerChoice) {
                 || humanChoice === "scissors" && computerChoice === "paper") { 
                    
                     ++humanScore;
-                    console.log (humanChoice);
+
                     console.log (computerChoice);
                     console.log (humanScore);
                     console.log (computerScore);
@@ -93,7 +93,7 @@ function playRound (humanChoice, computerChoice) {
                     || humanChoice === "rock" && computerChoice === "paper")
                     {
                     ++computerScore;
-                    console.log (humanChoice);
+
                     console.log (computerChoice);
                     console.log (humanScore);
                     console.log (computerScore);
