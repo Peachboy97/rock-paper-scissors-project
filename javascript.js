@@ -42,13 +42,16 @@ scissors.addEventListener("click", () => {
 
 
 function playRound (humanChoice, computerChoice) {
+
+    let humanScore = 0;
+    let computerScore = 0;
         
         if (humanChoice === computerChoice) {
          
          console.log (humanChoice);
          console.log (computerChoice);
-        //  console.log (humanScore);
-        //  console.log (computerScore); 
+         console.log (humanScore);
+         console.log (computerScore); 
          
         //  add the gameover condition into return to play 5 rounds 
     
@@ -58,11 +61,11 @@ function playRound (humanChoice, computerChoice) {
                 || humanChoice === "paper" && computerChoice === "rock" 
                 || humanChoice === "scissors" && computerChoice === "paper") { 
                    
-                    // ++humanScore;
+                    ++humanScore;
                     console.log (humanChoice);
                     console.log (computerChoice);
-                    // console.log (humanScore);
-                    // console.log (computerScore);
+                    console.log (humanScore);
+                    console.log (computerScore);
                     
                     
                     return console.log ("You win");
@@ -71,11 +74,11 @@ function playRound (humanChoice, computerChoice) {
                     || humanChoice === "scissors" && computerChoice === "rock"
                     || humanChoice === "rock" && computerChoice === "paper")
                     {
-                    // ++computerScore;
+                    ++computerScore;
                     console.log (humanChoice);
                     console.log (computerChoice);
-                    // console.log (humanScore);
-                    // console.log (computerScore);
+                    console.log (humanScore);
+                    console.log (computerScore);
                     
                 
                     return console.log ("You lose");
