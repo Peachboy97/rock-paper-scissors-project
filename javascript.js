@@ -11,15 +11,6 @@ function getComputerChoice () {
 }
 
 
-function getHumanChoice (){
-   
-    return "paper";
-}
-
-
-
-// const humanChoice = getHumanChoice ();
-// const computerChoice = getComputerChoice ();
 
 const rock = document.querySelector("#Rock");
 const paper = document.querySelector("#Paper");
@@ -40,6 +31,11 @@ scissors.addEventListener("click", () => {
     console.log("done");
 })
 
+const outcomeDisplay = document.querySelector("#outcomeDisplay");
+
+
+
+
 
 function playRound (humanChoice, computerChoice) {
 
@@ -51,11 +47,17 @@ function playRound (humanChoice, computerChoice) {
          console.log (humanChoice);
          console.log (computerChoice);
          console.log (humanScore);
-         console.log (computerScore); 
+         console.log (computerScore);   
+
+         const draw = document.createElement("p");
+         draw.textContent = "It is a draw";
+         outcomeDisplay.appendChild(draw);
+
+
          
         //  add the gameover condition into return to play 5 rounds 
     
-         return console.log ("It's a draw");
+         return draw;
 
         } else if (humanChoice === "rock" && computerChoice === "scissors"
                 || humanChoice === "paper" && computerChoice === "rock" 
@@ -66,9 +68,16 @@ function playRound (humanChoice, computerChoice) {
                     console.log (computerChoice);
                     console.log (humanScore);
                     console.log (computerScore);
+
+
+                    const win = document.createElement("p");
+                    win.textContent = "You win";
+                    outcomeDisplay.appendChild(win);
+
+
                     
                     
-                    return console.log ("You win");
+                    return win;
 
                 } else if (humanChoice === "paper" && computerChoice === "scissors"
                     || humanChoice === "scissors" && computerChoice === "rock"
@@ -79,9 +88,19 @@ function playRound (humanChoice, computerChoice) {
                     console.log (computerChoice);
                     console.log (humanScore);
                     console.log (computerScore);
+
+
+                    const lose = document.createElement("p");
+                    lose.textContent = "You lose";
+                    outcomeDisplay.appendChild(lose);
+
+
+
+
+
                     
                 
-                    return console.log ("You lose");
+                    return lose;
                 }
     } 
 
