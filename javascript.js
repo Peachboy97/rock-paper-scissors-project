@@ -33,14 +33,18 @@ scissors.addEventListener("click", () => {
 
 const outcomeDisplay = document.querySelector("#outcomeDisplay");
 
+let humanScore = 0;
+let computerScore = 0;
+
+
 
 
 
 
 function playRound (humanChoice, computerChoice) {
 
-    let humanScore = 0;
-    let computerScore = 0;
+    // let humanScore = 0;
+    // let computerScore = 0;
         
         if (humanChoice === computerChoice) {
          console.log (computerChoice);
@@ -54,6 +58,11 @@ function playRound (humanChoice, computerChoice) {
          const human = document.createElement("p");
          human.textContent = `You picked: ${humanChoice}`;
          outcomeDisplay.appendChild(human);
+
+
+         const hScore = document.createElement("p");
+         hScore.textContent = `Your score is ${humanScore}`;
+         outcomeDisplay.appendChild(hScore);
 
         
 
@@ -80,8 +89,14 @@ function playRound (humanChoice, computerChoice) {
 
 
                     const human = document.createElement("p");
-                    human.textContent = humanChoice;
+                    human.textContent = `You picked: ${humanChoice}`;
                     outcomeDisplay.appendChild(human);
+
+
+
+                   const hScore = document.createElement("p");
+                   hScore.textContent = `Your score is ${humanScore}`;
+                   outcomeDisplay.appendChild(hScore);                    
 
 
                     
@@ -106,13 +121,14 @@ function playRound (humanChoice, computerChoice) {
 
 
                     const human = document.createElement("p");
-                    human.textContent = humanChoice;
+                    human.textContent = `You picked: ${humanChoice}`;
                     outcomeDisplay.appendChild(human);
 
 
 
-
-
+                  const hScore = document.createElement("p");
+                  hScore.textContent = `Your score is ${humanScore}`;
+                  outcomeDisplay.appendChild(hScore);
                     
                 
                     return lose;
