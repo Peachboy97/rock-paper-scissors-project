@@ -53,6 +53,10 @@ function playRound (humanChoice, computerChoice) {
          draw.textContent = "It is a draw";
          outcomeDisplay.appendChild(draw);
 
+         const human = document.createElement("p");
+         human.textContent = humanChoice;
+         outcomeDisplay.appendChild(human);
+
 
          
         //  add the gameover condition into return to play 5 rounds 
@@ -75,6 +79,11 @@ function playRound (humanChoice, computerChoice) {
                     outcomeDisplay.appendChild(win);
 
 
+                    const human = document.createElement("p");
+                    human.textContent = humanChoice;
+                    outcomeDisplay.appendChild(human);
+
+
                     
                     
                     return win;
@@ -93,6 +102,12 @@ function playRound (humanChoice, computerChoice) {
                     const lose = document.createElement("p");
                     lose.textContent = "You lose";
                     outcomeDisplay.appendChild(lose);
+
+
+
+                    const human = document.createElement("p");
+                    human.textContent = humanChoice;
+                    outcomeDisplay.appendChild(human);
 
 
 
