@@ -60,6 +60,11 @@ function playRound (humanChoice, computerChoice) {
          outcomeDisplay.appendChild(human);
 
 
+         const computer = document.createElement("p");
+         computer.textContent = `computer picked: ${computerChoice}`;
+         outcomeDisplay.appendChild(computer);
+
+
          const hScore = document.createElement("p");
          hScore.textContent = `Your score is ${humanScore}`;
          outcomeDisplay.appendChild(hScore);
@@ -97,6 +102,10 @@ function playRound (humanChoice, computerChoice) {
                     human.textContent = `You picked: ${humanChoice}`;
                     outcomeDisplay.appendChild(human);
 
+                    const computer = document.createElement("p");
+                    computer.textContent = `computer picked: ${computerChoice}`;
+                    outcomeDisplay.appendChild(computer);
+
 
 
                    const hScore = document.createElement("p");
@@ -133,13 +142,19 @@ function playRound (humanChoice, computerChoice) {
                     human.textContent = `You picked: ${humanChoice}`;
                     outcomeDisplay.appendChild(human);
 
-                  const hScore = document.createElement("p");
-                  hScore.textContent = `Your score is ${humanScore}`;
-                  outcomeDisplay.appendChild(hScore);
 
-                  const cScore = document.createElement("p");
-                  cScore.textContent = `Computer score is ${computerScore}`;
-                  outcomeDisplay.appendChild(cScore);
+
+                    const computer = document.createElement("p");
+                    computer.textContent = `computer picked: ${computerChoice}`;
+                    outcomeDisplay.appendChild(computer);
+
+                    const hScore = document.createElement("p");
+                    hScore.textContent = `Your score is ${humanScore}`;
+                    outcomeDisplay.appendChild(hScore);
+
+                    const cScore = document.createElement("p");
+                    cScore.textContent = `Computer score is ${computerScore}`;
+                   outcomeDisplay.appendChild(cScore);
                     
                 
                     return lose;
