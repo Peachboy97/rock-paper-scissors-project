@@ -32,13 +32,13 @@ scissors.addEventListener("click", () => {
 })
 
 const outcomeDisplay = document.querySelector("#outcomeDisplay");
+const hRunningScore = document.querySelector("#humanScore");
+const cRunningScore = document.querySelector("#computerScore")
+
+
 
 let humanScore = 0;
 let computerScore = 0;
-
-
-
-
 
 
 function playRound (humanChoice, computerChoice) {
@@ -61,18 +61,19 @@ function playRound (humanChoice, computerChoice) {
 
 
          const computer = document.createElement("p");
-         computer.textContent = `computer picked: ${computerChoice}`;
+         computer.textContent = `Computer picked: ${computerChoice}`;
          outcomeDisplay.appendChild(computer);
 
 
          const hScore = document.createElement("p");
-         hScore.textContent = `Your score is ${humanScore}`;
-         outcomeDisplay.appendChild(hScore);
+         hScore.textContent = `Your score is: ${humanScore}`;
+         hRunningScore.appendChild(hScore);
+        
 
 
          const cScore = document.createElement("p");
-         cScore.textContent = `Computer score is ${computerScore}`;
-         outcomeDisplay.appendChild(cScore);
+         cScore.textContent = `Computer score is: ${computerScore}`;
+         cRunningScore.appendChild(cScore);
 
         
 
@@ -103,18 +104,18 @@ function playRound (humanChoice, computerChoice) {
                     outcomeDisplay.appendChild(human);
 
                     const computer = document.createElement("p");
-                    computer.textContent = `computer picked: ${computerChoice}`;
+                    computer.textContent = `Computer picked: ${computerChoice}`;
                     outcomeDisplay.appendChild(computer);
 
 
 
                    const hScore = document.createElement("p");
-                   hScore.textContent = `Your score is ${humanScore}`;
-                   outcomeDisplay.appendChild(hScore);       
+                   hScore.textContent = `Your score is: ${humanScore}`;
+                   hRunningScore.appendChild(hScore);       
                    
                    const cScore = document.createElement("p");
-                   cScore.textContent = `Computer score is ${computerScore}`;
-                   outcomeDisplay.appendChild(cScore);
+                   cScore.textContent = `Computer score is: ${computerScore}`;
+                   cRunningScore.appendChild(cScore);
 
 
                     
@@ -145,16 +146,16 @@ function playRound (humanChoice, computerChoice) {
 
 
                     const computer = document.createElement("p");
-                    computer.textContent = `computer picked: ${computerChoice}`;
+                    computer.textContent = `Computer picked: ${computerChoice}`;
                     outcomeDisplay.appendChild(computer);
 
                     const hScore = document.createElement("p");
-                    hScore.textContent = `Your score is ${humanScore}`;
-                    outcomeDisplay.appendChild(hScore);
+                    hScore.textContent = `Your score is: ${humanScore}`;
+                    hRunningScore.appendChild(hScore);
 
                     const cScore = document.createElement("p");
-                    cScore.textContent = `Computer score is ${computerScore}`;
-                   outcomeDisplay.appendChild(cScore);
+                    cScore.textContent = `Computer score is: ${computerScore}`;
+                   cRunningScore.appendChild(cScore);
                     
                 
                     return lose;
