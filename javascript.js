@@ -41,10 +41,54 @@ let humanScore = 0;
 let computerScore = 0;
 
 
+    function gameOverConditions (humanScore,computerScore) {
+        if (humanScore === 5 && computerScore === 0) {
+
+             const win = document.createElement("p");
+             win.textContent = "You win";
+             outcomeDisplay.appendChild(win);
+
+        } else if (humanScore === 0 && computerScore === 5){
+
+             const lose = document.createElement("p");
+             lose.textContent = "You lose";
+             outcomeDisplay.appendChild(lose);
+
+
+        } else if (humanScore === 4 && computerScore === 1) {
+
+             const win = document.createElement("p");
+             win.textContent = "You win";
+             outcomeDisplay.appendChild(win);
+
+        } else if (computerScore === 4 && humanScore === 1) {
+
+            const lose = document.createElement("p");
+            lose.textContent = "You lose";
+            outcomeDisplay.appendChild(lose);
+
+
+        } else if (humanScore === 3 && computerScore === 2) {
+
+             const win = document.createElement("p");
+             win.textContent = "You win";
+             outcomeDisplay.appendChild(win);
+
+        } else if (humanScore === 2 && computerScore === 3) {
+
+             const lose = document.createElement("p");
+             lose.textContent = "You lose";
+             outcomeDisplay.appendChild(lose);
+
+        }
+    }
+
+
 function playRound (humanChoice, computerChoice) {
 
-    // let humanScore = 0;
-    // let computerScore = 0;
+
+
+
         
         if (humanChoice === computerChoice) {
          console.log (computerChoice);
@@ -81,7 +125,7 @@ function playRound (humanChoice, computerChoice) {
          
         //  add the gameover condition into return to play 5 rounds 
     
-         return draw;
+         return gameOverConditions(humanScore,computerScore);
 
         } else if (humanChoice === "rock" && computerChoice === "scissors"
                 || humanChoice === "paper" && computerChoice === "rock" 
@@ -93,10 +137,13 @@ function playRound (humanChoice, computerChoice) {
                     console.log (humanScore);
                     console.log (computerScore);
 
-
-                    const win = document.createElement("p");
-                    win.textContent = "You win";
-                    outcomeDisplay.appendChild(win);
+ // const lose = document.createElement("p");
+                    // lose.textContent = "You lose";
+                    // outcomeDisplay.appendChild(lose);
+                    // const win = document.createElement("p");
+        
+            // win.textContent = "You win";
+                    // outcomeDisplay.appendChild(win);
 
 
                     const human = document.createElement("p");
@@ -120,7 +167,7 @@ function playRound (humanChoice, computerChoice) {
 
                     
                     
-                    return win;
+                    return gameOverConditions(humanScore,computerScore);
 
                 } else if (humanChoice === "paper" && computerChoice === "scissors"
                     || humanChoice === "scissors" && computerChoice === "rock"
@@ -133,9 +180,9 @@ function playRound (humanChoice, computerChoice) {
                     console.log (computerScore);
 
 
-                    const lose = document.createElement("p");
-                    lose.textContent = "You lose";
-                    outcomeDisplay.appendChild(lose);
+                    // const lose = document.createElement("p");
+                    // lose.textContent = "You lose";
+                    // outcomeDisplay.appendChild(lose);
 
 
 
@@ -158,9 +205,15 @@ function playRound (humanChoice, computerChoice) {
                    cRunningScore.appendChild(cScore);
                     
                 
-                    return lose;
+                    return gameOverConditions(humanScore, computerScore);
                 }
     } 
+
+
+
+
+
+
 
 
 
@@ -211,24 +264,24 @@ function playRound (humanChoice, computerChoice) {
 //     const humanChoice = getHumanChoice ();
 //     const computerChoice = getComputerChoice ();
 
-//     function gameOverConditions (humanScore,computerScore) {
-//         if (humanScore === 5 && computerScore === 0) {
-//             console.log ("You've won the game");
-//         } else if (humanScore === 0 && computerScore === 5){
-//             console.log ("You've lost the game. The computer won");
-//         } else if (humanScore === 4 && computerScore === 1) {
-//             console.log("You've won the game");
-//         } else if (computerScore === 4 && humanScore === 1) {
-//             console.log("You've lost the game. The computer won");
-//         } else if (humanScore === 3 && computerScore === 2) {
-//             console.log ("You've won the game");
-//         } else if (humanScore === 2 && computerScore === 3) {
-//             console.log("You've lose the game. The computer won");
-//         } else if (humanScore < 5 && computerScore < 5) {
-//             playRound (getHumanChoice (), getComputerChoice ());
+    // function gameOverConditions (humanScore,computerScore) {
+    //     if (humanScore === 5 && computerScore === 0) {
+    //         console.log ("You've won the game");
+    //     } else if (humanScore === 0 && computerScore === 5){
+    //         console.log ("You've lost the game. The computer won");
+    //     } else if (humanScore === 4 && computerScore === 1) {
+    //         console.log("You've won the game");
+    //     } else if (computerScore === 4 && humanScore === 1) {
+    //         console.log("You've lost the game. The computer won");
+    //     } else if (humanScore === 3 && computerScore === 2) {
+    //         console.log ("You've won the game");
+    //     } else if (humanScore === 2 && computerScore === 3) {
+    //         console.log("You've lose the game. The computer won");
+    //     } else if (humanScore < 5 && computerScore < 5) {
+    //         playRound (getHumanChoice (), getComputerChoice ());
 
-//         }
-//     }
+    //     }
+    // }
 
 //     playRound (humanChoice, computerChoice);
     
