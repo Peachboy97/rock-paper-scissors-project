@@ -33,7 +33,8 @@ scissors.addEventListener("click", () => {
 
 const outcomeDisplay = document.querySelector("#outcomeDisplay");
 const hRunningScore = document.querySelector("#humanScore");
-const cRunningScore = document.querySelector("#computerScore")
+const cRunningScore = document.querySelector("#computerScore");
+const results = document.querySelector("#Result");
 
 
 
@@ -46,39 +47,39 @@ let computerScore = 0;
 
              const win = document.createElement("p");
              win.textContent = "You win";
-             outcomeDisplay.appendChild(win);
+             results.appendChild(win);
 
         } else if (humanScore === 0 && computerScore === 5){
 
              const lose = document.createElement("p");
              lose.textContent = "You lose";
-             outcomeDisplay.appendChild(lose);
+             results.appendChild(lose);
 
 
         } else if (humanScore === 4 && computerScore === 1) {
 
              const win = document.createElement("p");
              win.textContent = "You win";
-             outcomeDisplay.appendChild(win);
+             results.appendChild(win);
 
         } else if (computerScore === 4 && humanScore === 1) {
 
             const lose = document.createElement("p");
             lose.textContent = "You lose";
-            outcomeDisplay.appendChild(lose);
+            results.appendChild(lose);
 
 
         } else if (humanScore === 3 && computerScore === 2) {
 
              const win = document.createElement("p");
              win.textContent = "You win";
-             outcomeDisplay.appendChild(win);
+             results.appendChild(win);
 
         } else if (humanScore === 2 && computerScore === 3) {
 
              const lose = document.createElement("p");
              lose.textContent = "You lose";
-             outcomeDisplay.appendChild(lose);
+             results.appendChild(lose);
 
         }
     }
